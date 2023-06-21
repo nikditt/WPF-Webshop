@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Chip",
+    "price": 19.99,
+    "currency": "USD",
+	"img": "https://icon-library.com/789999_chip.svg.html"
+  },
+  {
+    "id": "2",
+    "name": "Cable",
+    "price": 29.99,
+    "currency": "USD",
+	"img": "https://icon-library.com/power_adapter_electronic_devices_hardware_electric_equipment-512.html"
+  },
+  {
+    "id": "3",
+    "name": "MysteryBox",
+    "price": 39.99,
+    "currency": "USD",
+	"img": "https://icon-library.com/app-black-box-icon.html"
+  },
+  {
+    "id": "4",
+    "name": "Phone",
+    "price": 49.99,
+    "currency": "USD",
+	"img": "https://icon-library.com/653712_mobile-phone_512x512.html"
+  }
+]

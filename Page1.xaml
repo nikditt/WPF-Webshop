@@ -1,0 +1,48 @@
+﻿<Page x:Class="navigation.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:navigation"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+
+    <Grid Background="DarkSlateGray">
+        <Button x:Name="Button_right" Content="Next Page" HorizontalAlignment="Left" Margin="96,10,0,0" VerticalAlignment="Top" Height="28" Width="80" Click="Button_right_Click"/>
+        <Button x:Name="Button_left" Content="Previous Page" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="80" Click="Button_left_Click"/>
+        <Label Content="Content Browsing" HorizontalAlignment="Left" Margin="624,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Button_help" Content="Help" HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Height="28" Width="80" Click="Button_help_Click"/>
+        <Button x:Name="Button_save" Content="Save" HorizontalAlignment="Left" Margin="74,82,0,0" VerticalAlignment="Top" Click="Button_save_Click"/>
+        <Button x:Name="Button_open" Content="Open" HorizontalAlignment="Left" Margin="33,82,0,0" VerticalAlignment="Top" Click="Button_open_Click" RenderTransformOrigin="-1.184,0.838"/>
+        <ListView x:Name="ListView_content" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="33,110,511,248" SelectionChanged="ListView_content_SelectionChanged"/>
+        <TextBox x:Name="TextBox_user" TextWrapping="Wrap" Text="TextBox" Margin="33,225,511,120"/>
+
+        <ListView x:Name="CustomItems" Margin="424,110,54,51" ItemsSource="{Binding}">>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="147"/>
+                            <ColumnDefinition Width="57"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="tmpImage" Grid.Column="0" Width="32" Height="32"
+Source="{Binding img}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label x:Name="tmpLabel" Content="{Binding label}" Foreground="Teal"
+FontSize="14" Grid.Column="1" VerticalAlignment="Center"/>
+                        <TextBox x:Name="tmpTextbox" Grid.Column="2" Width="57" Height="27"
+Text="{Binding amount}"></TextBox>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Rectangle HorizontalAlignment="Left" Height="41" Margin="33,399,0,0" Stroke="Black" VerticalAlignment="Top" Width="40" Fill="ForestGreen"/>
+        <Rectangle HorizontalAlignment="Left" Height="41" Margin="78,399,0,0" Stroke="Black" VerticalAlignment="Top" Width="40" Fill="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="41" Margin="123,399,0,0" Stroke="Black" VerticalAlignment="Top" Width="40" Fill="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="41" Margin="168,399,0,0" Stroke="Black" VerticalAlignment="Top" Width="40" Fill="Black"/>
+        <Rectangle HorizontalAlignment="Left" Height="41" Margin="213,399,0,0" Stroke="Black" VerticalAlignment="Top" Width="40" Fill="Black"/>
+    </Grid>
+</Page>
